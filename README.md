@@ -1,4 +1,4 @@
-# CosmosArchive
+# SpaceVerse
 A complete, production-ready full-stack web application acting as a space mission encyclopedia. Browse, search, and filter real space missions from across the globe (NASA, ISRO, ESA, CNSA, JAXA, Roscosmos).
 
 ## Tech Stack
