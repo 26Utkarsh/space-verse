@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
     
     if (!chatSessions.has(sessionId)) {
       chatSessions.set(sessionId, ai.chats.create({
-        model: "gemini-3.1-pro-preview",
+        model: "gemini-2.0-flash",
         config: {
           systemInstruction: `You are AstroAI, a highly knowledgeable Space AI assistant built into an interactive space mission tracking app. 
           Your primary focus is space news, cosmic phenomena, and details about space missions. 
@@ -22,7 +22,6 @@ router.post('/', async (req, res) => {
           If the user asks how you are working without an API key, explain that your API key is securely injected into the environment by the application's infrastructure, so the user doesn't need to provide one directly. You are running on a server that securely proxies requests to Google's Gemini servers!
           Keep responses engaging, accurate, and reasonably concise. Format output using markdown so it renders nicely.`,
           tools: [{ googleSearch: {} }],
-          toolConfig: { includeServerSideToolInvocations: true },
           temperature: 0.7,
         }
       }));
