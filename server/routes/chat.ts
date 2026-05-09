@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { GoogleGenAI } from '@google/genai';
 
 const router = Router();
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || '' });
+const ai = new GoogleGenAI({ apiKey: process.env.MY_GEMINI_API_KEY || '' });
 
 // Store conversation history per session
 const chatHistories = new Map<string, Array<{ role: string; parts: Array<{ text: string }> }>>();
